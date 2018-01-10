@@ -1,5 +1,7 @@
 const path = require('path');
-const webpack = require('webpack')
+const webpack = require('webpack');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     entry: {
         vendor:["react", "react-dom"],
@@ -52,6 +54,7 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: "vendor",
             filename: "vendor.bundle.js"
-        })
+        }),
+        new HTMLWebpackPlugin()
     ]
 };
