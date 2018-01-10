@@ -1,3 +1,6 @@
-const arr = ['JavaScript' , "Node", "Webpack", "React", "Angular", "Ember"];
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-console.log(arr);
+const MyComponent = () => <h1> Webpack and React </h1>;
+
+ReactDOM.render(<MyComponent />, document.getElementById("react-container"));
