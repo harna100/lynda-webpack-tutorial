@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack')
 module.exports = {
     entry: {
         about:"./src/about.js",
@@ -47,5 +47,11 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "commons",
+            filename: "commons.bundle.js"
+        })
+    ]
 };
